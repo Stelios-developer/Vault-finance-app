@@ -33,6 +33,15 @@ function App() {
     loadData();
   }, []);
 
+  useEffect(() => {
+    if (categories.length > 0) {
+      const filtered = categories.filter(c => c.type === txType);
+      if (filtered.length > 0) {
+        setCategoryId(filtered[0].id);
+      }
+    }
+  }, [txType, categories]);
+
   // --- BACKEND FETCHING (Kept exactly as your Node.js needs it) ---
   const fetchCategories = () => fetch('http://localhost:5000/categories').then(r => r.json()).then(data => {
     setCategories(data);
