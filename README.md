@@ -10,8 +10,7 @@
 
 ## 📸 Screenshots
 
-> _Add a screenshot of your dashboard here_
-> `![Dashboard Preview](./screenshots/dashboard.png)`
+![Dashboard Preview](./screenshots/dashboard.png)
 
 ---
 
